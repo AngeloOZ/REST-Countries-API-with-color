@@ -29,7 +29,6 @@ body.active .header{
     color: hsl(0, 0%, 100%);
 }
 .header .nav{
-    /* position: fixed; */
     height: 50px;
     width: 90%;
     margin: auto;

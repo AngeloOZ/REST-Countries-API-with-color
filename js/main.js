@@ -48,6 +48,7 @@ btnDark.addEventListener('click', _ => {
 
 ctnCountries.addEventListener('click', e => {
     if (e.target.className == 'img-country') {
+        window.scrollTo(0, 0)
         const name = e.target.parentElement.querySelector('.name-country').textContent.toLowerCase();
         dataCountry
             .then(data => searchCountryName(data, name))
