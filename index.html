@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/736596057b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="active">
+    <header class="header">
+        <nav class="nav">
+            <h1 class="title">Where in the world?</h1>
+            <div class="dark-mode">
+                <a class="btn-dark-mode" id="btn-dark-mode">
+                    <i class="far fa-moon"></i>
+                    Dark Mode
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <form action="" class="filter">
+            <div class="search">
+                <span class="icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="searchCountry" placeholder="Search for a country...">
+            </div>
+            <div class="filter-select">
+                <select name="" id="selectRegion">
+                    <option value="" selected disabled>Filter by Region</option>
+                    <option value="africa">Africa</option>
+                    <option value="americas">Americas</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+        </form>
+        <div class="countries" id="ctn-countries"></div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
