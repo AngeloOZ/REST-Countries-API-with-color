@@ -1,13 +1,23 @@
 const ctnCountries = document.getElementById('ctn-countries');
-const formFilter = document.querySelector('.filter');
-const inputSarch = formFilter.searchCountry;
-const selectRegion = formFilter.selectRegion;
+const inputSarch = document.querySelector('#searchCountry')
+const selectRegion = document.querySelector('#selectRegion')
 const dataCountry = getAllDataCountries();
 const btnDark = document.getElementById('btn-dark-mode');
 const btnBackModal = document.getElementById('#btn-back');
 
 dataCountry
-    .then(data => addCountryinDOM(data))
+    .then(data => {
+        let countriesx = [];
+        let i = 0;
+        while(i < 8){
+            const indice = (Math.floor(Math.random()*250)) + 1;
+            if(!countriesx.includes(data[indice])){
+                countriesx.push(data[indice])
+                i++;
+            }
+        }
+        addCountryinDOM(countriesx)
+    })
     .catch(err => console.log(err))
 
 /* Eventos */
@@ -19,7 +29,6 @@ document.querySelector('body').addEventListener('click', e => {
     }
 })
 
-formFilter.addEventListener('submit', e => e.preventDefault());
 
 inputSarch.addEventListener('keyup', e => {
     const name = (inputSarch.value).toLowerCase();
@@ -106,8 +115,7 @@ function searchCountriesRegion(countries, region) {
 function searchCountriesalpha3Code(countries, alpha) {
     return countries.filter(country => (country.alpha3Code) == alpha);
 }
-let aux
-async function createModal(countries) {
+function createModal(countries) {
     document.querySelector('body').classList.add('active-modal')
     const divModal = document.createElement('DIV');
     divModal.classList.add('modal');

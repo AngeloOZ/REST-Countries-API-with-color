@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -28,13 +28,13 @@
         </nav>
     </header>
     <main class="container">
-        <form action="" class="filter">
+        <div class="filter">
             <div class="search">
                 <span class="icon"><i class="fas fa-search"></i></span>
-                <input type="text" id="searchCountry" placeholder="Search for a country...">
+                <input type="text" name="searchcountry" id="searchCountry" placeholder="Search for a country...">
             </div>
             <div class="filter-select">
-                <select name="" id="selectRegion">
+                <select name="selectRegion" id="selectRegion">
                     <option value="" selected disabled>Filter by Region</option>
                     <option value="africa">Africa</option>
                     <option value="americas">Americas</option>
@@ -43,7 +43,7 @@
                     <option value="oceania">Oceania</option>
                 </select>
             </div>
-        </form>
+        </div>
         <div class="countries" id="ctn-countries"></div>
     </main>
 
